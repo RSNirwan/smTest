@@ -1,0 +1,18 @@
+{% if queryset %}
+<div class="container">
+	<table class='table'>
+	<tr>
+		<td><h4>Counter</h4></td>
+		<td><h4>User Name</h4></td>
+		<td><h4>Last update</h4></td>
+	</tr>
+	{% for user in queryset %}
+		<tr>
+			<td>{{ forloop.counter }}</td>
+			<td><a href='{% url "users_config" name=user.user_name %}'>{{ user.user_name }}</a></td>
+			<td>{{ user.updated | timesince }} ago</td>
+		</tr>
+	{% endfor %}
+	</table>
+</div>
+{% endif %}

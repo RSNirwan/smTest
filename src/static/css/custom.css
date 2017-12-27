@@ -1,0 +1,15 @@
+body {
+  min-height: 1000px;
+}
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.drag-drop{
+      border: 2px solid gray;
+      border-radius: 5px;
+      padding: 5px;
+      white-space: nowrap;
+      z-index: 2;
+    }

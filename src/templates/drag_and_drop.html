@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="container-fluid", style="position: relative; bottom: 0px; top: 0px; right: 0px; left: 0px; margin-bottom: 50px;">
+	
+	{% if name %}
+		<h2>Hola {{ name }}! Here are your configurations.</h2>
+		<h4>To change them you can reset and drag and drop new ones into the mirror.</h4>
+	{% else %}
+		<h2>Please choose a user from the Users-list above.</h2>
+	{% endif %}
+
+	<div class="row" style="height: 100%; position: relative; min-height:500px;">
+	  <div class="col-xs-3 widgets" style="background-color: #e7e8ea; position: relative; bottom: 0px; left: 0px; top:0px; min-height:500px">
+	    <h2>Widgets</h2>
+	    {% for widget in widget_list %}
+	      <h3 class="tool {{ widget }} drag-drop">{{ widget }}</h3>
+	    {% endfor %}
+	    <div class='row' style="position:absolute; bottom:0px; margin-bottom:20px;">
+	      <div class="col-xs-3">
+	      <input type="submit" id="resetConfig" class="btn btn-primary" value="Reset">
+	      </div>
+	      <div class="col-xs-6">
+	      <input type="submit" id="saveConfig" class="btn btn-primary" value="Save configuration" >
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-xs-9 mirror" style="background-color: #b2c2ba; position: absolute; bottom: 0px; right: 0px; top: 0px;">
+	    <h2>mirror</h2>
+	  </div>
+	</div>
+	</div>
+</div>

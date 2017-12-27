@@ -1,0 +1,17 @@
+{% if widget_list %}
+
+	
+	<div class="container" style="margin-top: 50px;">
+		<h2>List of available Widgets</h2>
+		<table class='table'>
+		{% for widget in widget_list %}
+			<tr>
+				<!-- <td>{{ forloop.counter }}</td> -->
+				<td>{{ widget }}</td>
+				<td>some discription...</td>
+			</tr>
+		{% endfor %}
+		</table>
+	</div>
+
+{% endif %}

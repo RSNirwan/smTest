@@ -1,0 +1,5 @@
+test environment
+django 1.11 python 2.7.13
+
+for db: su nirwan pw 1234abcd 
+

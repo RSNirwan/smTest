@@ -1,0 +1,15 @@
+
+<div class="container">
+	{% if thanks %}
+	<h1>{{ thanks }}</h1>
+	<h4>You can set your configuration for the mirror below.</h4>
+	{% endif %}
+
+	{% if not thanks %}
+		You are not listed above? Create a new user here!
+		<form method='POST' action=''>{% csrf_token %}
+			{{ form.as_table }}
+			<input type='submit' value='Join Us'/>
+		</form> 
+	{% endif %}
+</div>
